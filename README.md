@@ -23,7 +23,6 @@
 -->
 
 ## About the Project
-This dataset is a comprehensive documentation of over 260k US gun violence incidents from 2013 to 2018. Each record includes information with regards to a particular gun-related incident such as the state and city where the incident occurred, descriptions of the incident participants, the number of individuals injured or killed, and the type of guns involved. Feel free to visit [this page](https://www.kaggle.com/jameslko/gun-violence-data) to view the original dataset.
 
 My inspiration for performing this analysis stems back to my time during undergrad at the University of Florida. I was taking an introductory data analysis course, and as our final project, we had to analyze this specific dataset. At the time, I primarily used Excel to perform my analysis. Now having a greater understanding of other languages such as Python and R, I decided to revisit and further investigate the data.
 
@@ -32,3 +31,6 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
 ## Built With
 
 ## Getting Started
+
+## Overview of the Dataset
+This dataset is a comprehensive documentation of over 260k US gun violence incidents from 2013 to 2018. Each record includes information with regards to a particular gun-related incident such as the state and city where the incident occurred, descriptions of the incident participants, the number of individuals injured or killed, and the type of guns involved. Feel free to visit [this page](https://www.kaggle.com/jameslko/gun-violence-data) to view the original dataset.
