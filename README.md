@@ -44,7 +44,7 @@ This dataset is a comprehensive documentation of over 260k US gun violence incid
 | 267884 | 2014-12-02 | Alabama | Birmingham | 1000 block of 15th Place SW | 0 | 1 | http://www.gunviolencearchive.org/incident/267884 | http://www.al.com/news/birmingham/index.ssf/2014/12/suspected_burglar_seriously_wo.html | False | 7.0 |  |  | Shot - Wounded/Injured\|\|Defensive Use\|\|Defensive Use - Victim stops crime | 33.4867 |  | -86.8553 |  |  |  |  | 0::Male |  |  | 0::Injured\|\|1::Unharmed | 0::Subject-Suspect\|\|1::Subject-Suspect | http://www.al.com/news/birmingham/index.ssf/2014/12/suspected_burglar_seriously_wo.html | 52.0 | 18.0 |
 
 
-## Analysis by City: Chicago
+## Analysis by City: Chicago, IL
 To aid for better visualizations, I decided to focus on certain cities rather than try to visualize shootings across the entire United States. For the next several sections, all data will be filtered towards Chicago, Illinois since that was the city with the most shootings in the dataset. 
 
 ```python
@@ -54,4 +54,15 @@ df_city = df_city.loc[df_city['longitude'].notnull()]
 ```
 
 The original python file can be downloaded [here]() which can allow users to change the city that analysis is performed on by modifying the <span style="font-family:Consolas; font-size:4em;">city</span> and <span style="font-family:Consolas; font-size:4em;">state</span> variables at the beginning of the script.
+
+### KMeans Clustering for City Segmentation
+
+```python
+K = np.arange(21)[1:]
+inertias = []
+for k in K:
+    kmeans = KMeans(n_clusters=k).fit(df_city[['latitude', 'longitude']])
+    inertias.append(kmeans.inertia_)
+```
+
 
