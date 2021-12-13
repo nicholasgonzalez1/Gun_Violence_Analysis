@@ -3,7 +3,7 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project">About the Project</a></li>
+    <li><a href="#about-the-project-and-inspiration">About the Project and Inspiration</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
   </ol>
@@ -23,6 +23,7 @@
 -->
 
 ## About the Project
+My inspiration for performing this analysis stems back to my time during undergrad at the University of Florida. I was taking an introductory data analysis course, and as our final project, we had to analyze this specific dataset. At the time, I primarily used Excel to perform my analysis. Now having a greater understanding of data exploration in Python and R, I decided to revisit the dataset and perform more 
 
 ## Built With
 
