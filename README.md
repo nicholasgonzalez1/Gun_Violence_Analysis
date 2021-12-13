@@ -42,3 +42,14 @@ This dataset is a comprehensive documentation of over 260k US gun violence incid
 | 856979 | 2017-05-29 | Colorado | Montrose | 1308 E Main St | 0 | 1 | http://www.gunviolencearchive.org/incident/856979 | http://www.gjsentinel.com/news/articles/13yearold-boy-shot-while-sleeping-at-montrose-home | False | 3.0 | 0::Unknown | 0::Unknown | Shot - Wounded/Injured | 38.486 | Ikies Trailer Park | -107.867 | 1.0 |  | 0::13 | 0::Teen 12-17 | 0::Male |  |  | 0::Injured | 0::Victim | http://www.gjsentinel.com/news/articles/13yearold-boy-shot-while-sleeping-at-montrose-home | 58.0 | 6.0 |
 | 692642 | 2016-11-04 | Illinois | Chicago | 3500 block of West Augusta Boulevard | 0 | 1 | http://www.gunviolencearchive.org/incident/692642 | http://chicago.suntimes.com/news/man-42-shot-in-humboldt-park/ | False | 7.0 | 0::Unknown | 0::Unknown | Shot - Wounded/Injured\|\|Drive-by (car to street, car to car) | 41.8991 | Humboldt Park | -87.714 | 1.0 | Car-to-car drive-by wounds driver, leg; | 0::42 | 0::Adult 18+ | 0::Male\|\|1::Male |  |  | 0::Injured\|\|1::Unharmed | 0::Victim\|\|1::Subject-Suspect | http://chicago.suntimes.com/news/man-42-shot-in-humboldt-park/ | 10.0 | 5.0 |
 | 267884 | 2014-12-02 | Alabama | Birmingham | 1000 block of 15th Place SW | 0 | 1 | http://www.gunviolencearchive.org/incident/267884 | http://www.al.com/news/birmingham/index.ssf/2014/12/suspected_burglar_seriously_wo.html | False | 7.0 |  |  | Shot - Wounded/Injured\|\|Defensive Use\|\|Defensive Use - Victim stops crime | 33.4867 |  | -86.8553 |  |  |  |  | 0::Male |  |  | 0::Injured\|\|1::Unharmed | 0::Subject-Suspect\|\|1::Subject-Suspect | http://www.al.com/news/birmingham/index.ssf/2014/12/suspected_burglar_seriously_wo.html | 52.0 | 18.0 |
+
+
+## Analysis by City: Chicago
+To aid for better visualizations, I decided to filter upon certain cities rather than try to visualize shootings across the entire United States. For the next several sections, all data will be geared towards Chicago, Illinois. However, the original python file can be downloaded [here]() which can allow users to change the city that analysis is performed on by modifying the <span style="font-family:Consolas; font-size:4em;">city</span> and <span style="font-family:Consolas; font-size:4em;">state</span> variables at the beginning of the script.
+
+'''python
+df_city = df_guns.loc[df_guns['city_or_county'].str.contains(city)]
+df_city = df_city.loc[df_guns['state']==state]
+df_city = df_city.loc[df_city['longitude'].notnull()]
+'''
+
