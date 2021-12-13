@@ -3,7 +3,7 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project-and-inspiration">About the Project and Inspiration</a></li>
+    <li><a href="#inspiration-for-the-project">Inspiration for the Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
   </ol>
