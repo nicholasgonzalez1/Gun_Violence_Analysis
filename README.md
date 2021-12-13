@@ -45,7 +45,7 @@ This dataset is a comprehensive documentation of over 260k US gun violence incid
 
 
 ## Analysis by City: Chicago
-To aid for better visualizations, I decided to filter upon certain cities rather than try to visualize shootings across the entire United States. For the next several sections, all data will be geared towards Chicago, Illinois as that was the city with the most shootings in the dataset. 
+To aid for better visualizations, I decided to focus on certain cities rather than try to visualize shootings across the entire United States. For the next several sections, all data will be filtered towards Chicago, Illinois since that was the city with the most shootings in the dataset. 
 
 ```python
 df_city = df_guns.loc[df_guns['city_or_county'].str.contains(city)]
