@@ -27,7 +27,7 @@ This dataset is a comprehensive documentation of over 260k US gun violence incid
 
 My inspiration for performing this analysis stems back to my time during undergrad at the University of Florida. I was taking an introductory data analysis course, and as our final project, we had to analyze this specific dataset. At the time, I primarily used Excel to perform my analysis. Now having a greater understanding of other languages such as Python and R, I decided to revisit and further investigate the data.
 
-My primary goal with exploring the dataset is to discover hidden patterns and trends, and provide clear, meaningful visualizations of my analysis.
+My primary goal with exploring the dataset is to discover hidden patterns and trends while also providing clear and meaningful visualizations of my analysis.
 
 ## Built With
 
