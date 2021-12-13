@@ -22,7 +22,7 @@
     <li><a href="#acknowledgements">Acknowledgements</a></li>
 -->
 
-## About the Project
+## About the Project and Inspiration
 
 My inspiration for performing this analysis stems back to my time during undergrad at the University of Florida. I was taking an introductory data analysis course, and as our final project, we had to analyze this specific dataset. At the time, I primarily used Excel to perform my analysis. Now having a greater understanding of other languages such as Python and R, I decided to revisit and further investigate the data.
 
