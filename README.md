@@ -149,7 +149,33 @@ def assign_deadliness(n_injured, n_killed):
 ```
 
 ```python
-df_plot['deadliness_factor'] = df_plot.apply(lambda x: assign_deadliness(x['n_injured'],
-                                              x['n_killed']), axis=1)
+df_plot['deadliness_factor'] = df_plot.apply(lambda x: assign_deadliness(x['n_injured'], x['n_killed']), axis=1)
 ```
 #### Assign a Shooting Size
+
+Similar to differentiating incidents based on deadliness, the size (i.e. number of participants identified in an incident) was also considered. For example, a shooting with 5 individuals identified, regardless of whether they were victims or suspects, would carry more size than an incident with only 1 participant identified.
+
+```python
+def clean_participants_type(row_value):
+
+    # logic below produces a Pandas series object listing whether each participant was a victim or suspect
+    if row_value is np.NaN:
+        return {'Victim':0, 'Subject-Suspect':0}    
+    elif '::' in row_value:
+        types = pd.Series([person.split('::')[1] for person in row_value.split('||')])
+    else:
+        types = pd.Series([person.split(':')[1] for person in row_value.split('|')])
+        
+    # using value_counts(), the total number of victims and suspects is determined, which is then converted to a dictionary
+    types = dict(types.value_counts())
+    
+    # logic below ensures that if incident has no victims, 'Victim' key is still included, and vice-versa.
+    if 'Victim' not in types.keys():
+        types['Victim'] = 0
+    if 'Subject-Suspect' not in types.keys():
+        types['Subject-Suspect'] = 0
+    
+    return types
+```
+
+
