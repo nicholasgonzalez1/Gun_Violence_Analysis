@@ -10,6 +10,7 @@
       <a href="#analysis-by-city-chicago-il">Analysis by City: Chicago, IL</a>
       <ul>
         <li><a href="#kmeans-clustering-for-city-segmentation">KMeans Clustering for City Segmentation</a></li>
+        <li><a href="#cleaning-incident-characteristics-fields">Cleaning Incident Characteristics Fields</a></li>
       </ul>
     </li>
   </ol>
@@ -103,4 +104,6 @@ inertias = -100 * np.diff((inertias[1:] - np.repeat(start, len(inertias[1:])))/n
 n_clusters = np.argwhere(inertias < pct_change)[0][0]
 n_clusters = n_clusters + 3  # A value of 3 is added to account for index changes in NumPy functions
 ```
+
+### Cleaning Incident Characteristics Fields
 
