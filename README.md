@@ -48,8 +48,13 @@ This dataset is a comprehensive documentation of over 260k US gun violence incid
 To aid for better visualizations, I decided to focus on certain cities rather than try to visualize shootings across the entire United States. For the next several sections, all data will be filtered towards Chicago, Illinois since that was the city with the most shootings in the dataset. 
 
 ```python
+# Filter on city or county that contains "Chicago"
 df_city = df_guns.loc[df_guns['city_or_county'].str.contains(city)]
+
+# Filter for all results from previous statement to ensure in the state of Illinois
 df_city = df_city.loc[df_guns['state']==state]
+
+# Filter out any instances where geospatial data is not available
 df_city = df_city.loc[df_city['longitude'].notnull()]
 ```
 
@@ -58,7 +63,10 @@ The original python file can be downloaded [here]() which can allow users to cha
 ### KMeans Clustering for City Segmentation
 
 ```python
+# Test cluster amounts 1 - 20
 K = np.arange(21)[1:]
+
+# Run KMeans algorithm for each number of clusters and record its within-cluster sum-of-squares
 inertias = []
 for k in K:
     kmeans = KMeans(n_clusters=k).fit(df_city[['latitude', 'longitude']])
