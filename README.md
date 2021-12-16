@@ -62,7 +62,7 @@ The original python file can be downloaded [here]() which can allow users to cha
 
 ### KMeans Clustering for City Segmentation
 
-Below, I ran a KMeans algorithm in order segment the shootings within the city. We'll use the elbow method to determine what is the optimal number of clusters to use when plotting our gun incidents. The elbow graph displayed below shows how the within-cluster sum-of-squares decreases for each additional cluster added.
+Below, I ran a KMeans algorithm in order segment the shootings within the city. We'll use the elbow method to determine what is the optimal number of clusters to use when plotting our gun incidents. The elbow graph displayed below shows how the within-cluster sum-of-squares (WCSS) decreases for each additional cluster added.
 
 ```python
 # Test cluster amounts 1 - 20
@@ -82,3 +82,16 @@ for k in K:
     </kbd>
   </p>
 </figure>
+
+```python
+inertias = np.array(inertias)
+start = inertias[0]
+
+# Statement below calculates percent decrease in WCSS for each additional cluster
+inertias = -100 * np.diff((inertias[1:] - np.repeat(start, len(inertias[1:])))/np.repeat(start, len(inertias[1:])))
+
+# We select the first number of clusters which is less than a pre-specified threshold pct_change
+n_clusters = np.argwhere(inertias < pct_change)[0][0]
+n_clusters = n_clusters + 3  # We add a three to account for index changes in NumPy functions
+```
+
