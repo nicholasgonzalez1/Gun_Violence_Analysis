@@ -62,6 +62,8 @@ The original python file can be downloaded [here]() which can allow users to cha
 
 ### KMeans Clustering for City Segmentation
 
+Below, I ran a KMeans algorithm in order segment the shootings within the city. We'll use the elbow method to determine what is the optimal number of clusters to use when plotting our gun incidents. The elbow graph displayed below shows how the within-cluster sum-of-squares decreases for each additional cluster added.
+
 ```python
 # Test cluster amounts 1 - 20
 K = np.arange(21)[1:]
@@ -72,5 +74,5 @@ for k in K:
     kmeans = KMeans(n_clusters=k).fit(df_city[['latitude', 'longitude']])
     inertias.append(kmeans.inertia_)
 ```
-
+<img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/elbow_graph.jpg?raw=true" width="800">
 
