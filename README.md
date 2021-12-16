@@ -179,9 +179,8 @@ def clean_participants_type(row_value):
 ```
 
 ``` python
-""" DEMO of clean_participants_type() """
+# DEMO of clean_participants_type()
 test_value = '0::Victim||1::Victim||2::Victim||3::Victim||4::Subject-Suspect'
-
 participants = clean_participants_type(test_value)
 participants['Victim']          # outputs 4
 participants['Subject-Suspect'] # outputs 1
