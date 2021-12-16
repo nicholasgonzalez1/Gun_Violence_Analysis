@@ -121,14 +121,12 @@ df_plot = pd.concat([df_plot, cluster_assignments], axis=1)
 #### Assigning a Deadliness Factor
 
 In order to differentiate how deadly an incident was, the opaqueness of the plotted datapoints will be adjusted according to how many incident participants were injured or killed. The table below provides a breakdown of this metric for only Chicago, IL.
-<center>
-| injured | killed | percentage |
-|---------|--------|------------|
-| 0-2     | 0      | 79.37%     |
-| >2      | 0      | 2.81%      |
-| 0       | 1      | 13.15%     |
-| >0      | 1      | 3.71%      |
-| >0      | >1     | 0.96%      |
-</center>
-
+<br>
+<figure>
+  <p align="center">
+    <kbd>
+      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_breakdown?raw=true" width="350">
+    </kbd>
+  </p>
+</figure>
 
