@@ -74,5 +74,11 @@ for k in K:
     kmeans = KMeans(n_clusters=k).fit(df_city[['latitude', 'longitude']])
     inertias.append(kmeans.inertia_)
 ```
-<img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/elbow_graph.jpg?raw=true" width="800">
-
+<br>
+<figure>
+  <p align="center">
+    <kbd>
+      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/elbow_graph.jpg?raw=true" width="550">
+    </kbd>
+  </p>
+</figure>
