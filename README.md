@@ -118,6 +118,16 @@ cluster_assignments = pd.DataFrame({'cluster_assignment': list(kmeans.labels_)})
 df_plot = df_city[['latitude', 'longitude', 'n_injured', 'n_killed', 'participant_type']].reset_index(drop=True)
 df_plot = pd.concat([df_plot, cluster_assignments], axis=1)
 ```
+#### Assigning a Deadliness Factor
+
+In order to differentiate how deadly an incident was, the opaqueness of the plotted datapoints will be adjusted according to how many incident participants were injured or killed. The table below provides a breakdown of this metric for only Chicago, IL.
+| injured | killed | percentage |
+|---------|--------|------------|
+| 0-2     | 0      | 79.37%     |
+| >2      | 0      | 2.81%      |
+| 0       | 1      | 13.15%     |
+| >0      | 1      | 3.71%      |
+| >0      | >1     | 0.96%      |
 
 
 
