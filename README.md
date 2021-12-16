@@ -169,7 +169,7 @@ def clean_participants_type(row_value):
     # using value_counts(), the total number of victims and suspects is determined, which is then converted to a dictionary
     types = dict(types.value_counts())
     
-    # logic below ensures that if incident has no victims, 'Victim' key is still included, and vice-versa.
+    # logic below ensures that if incident has no victims or suspects, respective keys are still included
     if 'Victim' not in types.keys():
         types['Victim'] = 0
     if 'Subject-Suspect' not in types.keys():
