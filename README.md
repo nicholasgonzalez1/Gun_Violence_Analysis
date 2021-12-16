@@ -180,11 +180,35 @@ def clean_participants_type(row_value):
     return types
 ```
 
-``` python
+```python
 # Demo of clean_participants_type()
 test_value = '0::Victim||1::Victim||2::Victim||3::Victim||4::Subject-Suspect'
 participants = clean_participants_type(test_value)
 participants['Victim']          # outputs 4
 participants['Subject-Suspect'] # outputs 1
+```
+
+Using this function, two columns are created containing the number of suspects and victims for a given incident. A third column was constructed containing the sum of the previous two columns, 'n_participants'.
+
+```python
+df_plot['n_victims'] = df_plot.apply(lambda x: clean_participants_type(x['participant_type'])['Victim'], axis=1)
+df_plot['n_suspects'] = df_plot.apply(lambda x: clean_participants_type(x['participant_type'])['Subject-Suspect'], axis=1)
+df_plot['n_participants'] = df_plot['n_victims'] + df_plot['n_suspects']
+```
+Similar to assinging a deadliness factor, another function was created in order to assign weights corresponding to the incident size.
+
+```python
+def assign_shooting_size(size):
+    if size <= 1:
+        return 200
+    elif size <= 3:
+        return 250
+    elif size > 3:
+        return 400
+    else:
+        return 200
+```
+```python
+df_plot['shooting_size_weight'] = df_plot.apply(lambda x: assign_shooting_size(x['n_participants']), axis=1)
 ```
 
