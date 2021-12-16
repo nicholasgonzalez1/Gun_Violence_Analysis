@@ -155,6 +155,8 @@ df_plot['deadliness_factor'] = df_plot.apply(lambda x: assign_deadliness(x['n_in
 
 Similar to differentiating incidents based on deadliness, the size (i.e. number of participants identified in an incident) was also considered. For example, a shooting with 5 individuals identified, regardless of whether they were victims or suspects, would carry more size than an incident with only 1 participant identified.
 
+The function below takes in values from the 'participant_type' field and returns a dictionary object. Each item in the dictionary corresponds to how many victims and suspects were involved in the gun incident. An demo is provided below the clean_participants_type() function displaying what an example output would look like. 
+
 ```python
 def clean_participants_type(row_value):
 
@@ -179,7 +181,7 @@ def clean_participants_type(row_value):
 ```
 
 ``` python
-# DEMO of clean_participants_type()
+# Demo of clean_participants_type()
 test_value = '0::Victim||1::Victim||2::Victim||3::Victim||4::Subject-Suspect'
 participants = clean_participants_type(test_value)
 participants['Victim']          # outputs 4
