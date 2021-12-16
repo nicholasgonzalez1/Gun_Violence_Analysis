@@ -107,3 +107,15 @@ n_clusters = n_clusters + 3  # A value of 3 is added to account for index change
 
 ### Cleaning Incident Characteristics Fields
 
+```python
+# Run KMeans for previously calculated number of clusters and convert cluster assignments to Pandas column
+kmeans = KMeans(n_clusters=n_clusters).fit(df_city[['longitude', 'latitude']])
+cluster_assignments = pd.DataFrame({'cluster_assignment': list(kmeans.labels_)})
+
+# Extract columns that will be used or need to be cleaned, and concat cluster assignments
+df_plot = df_city[['latitude', 'longitude', 'n_injured', 'n_killed', 'participant_type']].reset_index(drop=True)
+df_plot = pd.concat([df_plot, cluster_assignments], axis=1)
+```
+
+
+
