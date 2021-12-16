@@ -149,6 +149,7 @@ def assign_deadliness(n_injured, n_killed):
 ```
 
 ```python
-df_plot['deadliness_factor'] = df_plot.apply(lambda x: assign_deadliness(x['n_injured'], x['n_killed']), axis=1)
+df_plot['deadliness_factor'] = df_plot.apply(lambda x: assign_deadliness(x['n_injured'],
+                                              x['n_killed']), axis=1)
 ```
 #### Assign a Shooting Size
