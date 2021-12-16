@@ -107,6 +107,8 @@ n_clusters = n_clusters + 3  # A value of 3 is added to account for index change
 
 ### Cleaning Incident Characteristics Fields
 
+One of the objectives when creating this visualization includes providing different weights according to the severity of the shooting. For example, it should be apparent when looking at the map which shooting was more deadly when comparing two separate incidents. In order to achieve this, the fields 'n_injured', 'n_killed', and 'participant_type' will need to be further scrubbed. The code snippet below creates a Pandas data frame containing only the columns of interest for creating our visualization.
+
 ```python
 # Run KMeans for previously calculated number of clusters and convert cluster assignments to Pandas column
 kmeans = KMeans(n_clusters=n_clusters).fit(df_city[['longitude', 'latitude']])
