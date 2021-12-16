@@ -118,7 +118,7 @@ cluster_assignments = pd.DataFrame({'cluster_assignment': list(kmeans.labels_)})
 df_plot = df_city[['latitude', 'longitude', 'n_injured', 'n_killed', 'participant_type']].reset_index(drop=True)
 df_plot = pd.concat([df_plot, cluster_assignments], axis=1)
 ```
-#### Assigning a Deadliness Factor
+#### Assign a Deadliness Factor
 
 In order to differentiate how deadly an incident was, the opaqueness of the plotted datapoints will be adjusted according to how many incident participants were injured or killed. The table below provides a breakdown of this metric for only Chicago, IL.
 <br>
@@ -130,3 +130,25 @@ In order to differentiate how deadly an incident was, the opaqueness of the plot
   </p>
 </figure>
 
+The defined function below takes in two arguments, the number of participants injured and killed, and assigns a deadliness factor according to the breakdown table above. These values will be used directly to adjust the opaqueness of datapoints in the final visualization.
+
+```python
+def assign_deadliness(n_injured, n_killed):
+    if (n_injured <= 2) and (n_killed == 0):
+        return 0.05
+    elif (n_injured > 2) and (n_killed == 0):
+        return 0.10
+    elif (n_injured == 0) and (n_killed == 1):
+        return 0.35
+    elif (n_injured > 0) and (n_killed == 1):
+        return 0.40
+    elif (n_killed > 1):
+        return 0.50
+    else:
+        return 0.05
+```
+
+```python
+df_plot['deadliness_factor'] = df_plot.apply(lambda x: assign_deadliness(x['n_injured'], x['n_killed']), axis=1)
+```
+#### Assign a Shooting Size
