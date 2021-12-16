@@ -83,6 +83,8 @@ for k in K:
   </p>
 </figure>
 
+The code snippet below determines the optimal number of clusters. We select the first cluster amount which has a percent decrease less than 10% from the initial within-cluster sum-of-squares amount for k=1. The 10% value is stored in the variable <span style="font-family:Consolas; font-size:4em;">pct_change</span> and serves as the pre-specified threshold. This value can be adjusted according to user preferences.
+
 ```python
 inertias = np.array(inertias)
 start = inertias[0]
@@ -90,8 +92,8 @@ start = inertias[0]
 # Statement below calculates percent decrease in WCSS for each additional cluster
 inertias = -100 * np.diff((inertias[1:] - np.repeat(start, len(inertias[1:])))/np.repeat(start, len(inertias[1:])))
 
-# We select the first number of clusters which is less than a pre-specified threshold pct_change
+# I select the first number of clusters which is less than a pre-specified threshold pct_change
 n_clusters = np.argwhere(inertias < pct_change)[0][0]
-n_clusters = n_clusters + 3  # We add a three to account for index changes in NumPy functions
+n_clusters = n_clusters + 3  # I add a 3 to account for index changes in NumPy functions
 ```
 
