@@ -6,8 +6,15 @@
     <li><a href="#inspiration-for-the-project">Inspiration for the Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
+    <li>
+      <a href="#analysis-by-city-chicago-il">Analysis by City: Chicago, IL</a>
+      <ul>
+        <li><a href="#kmeans-clustering-for-city-segmentation">KMeans Clustering for City Segmentation</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
+
 
 <!--
     <li>
