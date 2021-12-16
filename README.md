@@ -125,7 +125,7 @@ In order to differentiate how deadly an incident was, the opaqueness of the plot
 <figure>
   <p align="center">
     <kbd>
-      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_breakdown.png?raw=true" width="350">
+      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_breakdown.png?raw=true" width="200">
     </kbd>
   </p>
 </figure>
