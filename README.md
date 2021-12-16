@@ -77,8 +77,6 @@ for k in K:
 <br>
 <figure>
   <p align="center">
-    <kbd>
-      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/elbow_graph.jpg?raw=true" width="550">
-    </kbd>
+    <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/elbow_graph.jpg?raw=true" width="550">
   </p>
 </figure>
