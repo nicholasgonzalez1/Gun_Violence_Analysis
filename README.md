@@ -92,8 +92,8 @@ start = inertias[0]
 # Statement below calculates percent decrease in WCSS for each additional cluster
 inertias = -100 * np.diff((inertias[1:] - np.repeat(start, len(inertias[1:])))/np.repeat(start, len(inertias[1:])))
 
-# I select the first number of clusters which is less than a pre-specified threshold pct_change
+# Select the first number of clusters which is less than a pre-specified threshold pct_change
 n_clusters = np.argwhere(inertias < pct_change)[0][0]
-n_clusters = n_clusters + 3  # I add a 3 to account for index changes in NumPy functions
+n_clusters = n_clusters + 3  # A value of 3 is added to account for index changes in NumPy functions
 ```
 
