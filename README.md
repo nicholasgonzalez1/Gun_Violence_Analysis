@@ -11,6 +11,7 @@
       <ul>
         <li><a href="#kmeans-clustering-for-city-segmentation">KMeans Clustering for City Segmentation</a></li>
         <li><a href="#cleaning-incident-characteristics-fields">Cleaning Incident Characteristics Fields</a></li>
+        <li><a href="#folium-map-visualization">Folium Map Visualization</a></li>
       </ul>
     </li>
   </ol>
@@ -212,3 +213,4 @@ def assign_shooting_size(size):
 df_plot['shooting_size_weight'] = df_plot.apply(lambda x: assign_shooting_size(x['n_participants']), axis=1)
 ```
 
+### Folium Map Visualization
