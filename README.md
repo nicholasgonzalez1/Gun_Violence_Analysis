@@ -17,19 +17,6 @@
 </details>
 
 
-<!--
-    <li>
-      <a href="#user-interface-walkthrough">User Interface Walkthrough</a>
-      <ul>
-        <li><a href="#search-criteria-and-filters">Search Criteria and Filters</a></li>
-        <li><a href="#view-more-flight-information">View More Flight Information</a></li>
-        <li><a href="#reschedule-a-flight">Reschedule a Flight</a></li>
-        <li><a href="#cancel-a-flight">Cancel a Flight</a></li>
-      </ul>
-    </li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
--->
-
 ## Inspiration for the Project
 
 My inspiration for performing this analysis stems back to my time during undergrad at the University of Florida. I was taking an introductory data analysis course, and as our final project, we had to analyze this specific dataset. At the time, I primarily used Excel to perform my analysis. Now having a greater understanding of other languages such as Python and R, I decided to revisit and further investigate the data.
@@ -39,9 +26,9 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
 <figure>
   <p align="center">
     <kbd>
-      <a href="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/chicago.html?raw=true">
+      <iframe href="chicago.html">
       <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_demo.png?raw=true" width="550">
-      </a>
+      </iframe>
     </kbd>
   </p>
   <p align="center"><b>Click image to see demo of gun violence incidents in Chicago, Illinois</b></p>
