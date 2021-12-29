@@ -39,7 +39,7 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
 <figure>
   <p align="center">
     <kbd>
-      <a href="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/chicago.html">
+      <a href="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/chicago.html?raw=true">
       <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_demo.png?raw=true" width="550">
       </a>
     </kbd>
