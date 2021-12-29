@@ -42,6 +42,8 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
       <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_demo.png?raw=true" width="550">
     </kbd>
   </p>
+  <p align="center">Analysis Demo: Gun Violence Incidents in Chicago, Illinois</p>
+  <p align="center">(click image to see interactive map)</p>
 </figure>
 
 ## Built With
