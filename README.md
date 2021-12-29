@@ -35,6 +35,7 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
 </figure>
 
 ## Built With
+Python was used as the main language for the majority of the analysis. Different libraries were used depending on the function.
 * Data Manipulation: Pandas, NumPy
 * Geospatial Data: Folium, GeoPy
 * Graphics Visualization: Matplotlib
