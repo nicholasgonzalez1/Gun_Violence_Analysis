@@ -36,7 +36,6 @@ My inspiration for performing this analysis stems back to my time during undergr
 
 My primary goal with my exploration is to discover hidden trends in the dataset, and provide clear and meaningful visualizations of my analysis.
 
-<br>
 <figure>
   <p align="center">
     <kbd>
