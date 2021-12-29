@@ -37,6 +37,15 @@ My inspiration for performing this analysis stems back to my time during undergr
 
 My primary goal with my exploration is to discover hidden trends in the dataset, and provide clear and meaningful visualizations of my analysis.
 
+<br>
+<figure>
+  <p align="center">
+    <kbd>
+      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/chicago_demo.png?raw=true" width="550">
+    </kbd>
+  </p>
+</figure>
+
 ## Built With
 
 ## Getting Started
