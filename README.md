@@ -35,6 +35,9 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
 </figure>
 
 ## Built With
+* Data Manipulation: Pandas, NumPy
+* Geospatial Data: Folium, GeoPy
+* Graphics Visualization: Matplotlib
 
 ## Overview of the Dataset
 This dataset is a comprehensive documentation of over 260k US gun violence incidents from 2013 to 2018. Each record includes information with regards to a particular gun-related incident such as the state and city where the incident occurred, descriptions of the incident participants, the number of individuals injured or killed, and the type of guns involved. Feel free to visit [this page](https://www.kaggle.com/jameslko/gun-violence-data) to view the original dataset.
