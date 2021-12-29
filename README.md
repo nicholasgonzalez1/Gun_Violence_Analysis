@@ -34,6 +34,8 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
   <p align="center"><b>Click image to see demo of gun violence incidents in Chicago, Illinois</b></p>
 </figure>
 
+<iframe src="chicago.html" height="500" width="500"></iframe>
+
 ## Built With
 
 ## Overview of the Dataset
