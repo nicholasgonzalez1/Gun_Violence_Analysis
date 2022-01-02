@@ -38,6 +38,7 @@ My primary goal with my exploration is to discover hidden trends in the dataset,
 Python was used as the main language for the majority of the analysis. Different libraries were used depending on the function.
 * Data Manipulation: Pandas, NumPy
 * Geospatial Data: Folium, GeoPy
+* Clustering Algorithm: Sklearn
 * Graphics Visualization: Matplotlib
 
 ## Overview of the Dataset
