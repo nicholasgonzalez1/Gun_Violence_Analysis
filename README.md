@@ -13,7 +13,7 @@
         <li><a href="#folium-map-visualization">Folium Map Visualization</a></li>
       </ul>
     </li>
-    <li><a href="#analyze-other-cities">Analyze other Cities</a></li>
+    <li><a href="#analyze-other-cities">Analyze Other Cities</a></li>
   </ol>
 </details>
 
@@ -240,3 +240,6 @@ The python script iterates through all clusters, calling on this function to plo
     </kbd>
   </p>
 </figure>
+
+## Analyze Other Cities
+The python notebook used to make this visualization can be downloaded and executed for other cities of the user's interest.
