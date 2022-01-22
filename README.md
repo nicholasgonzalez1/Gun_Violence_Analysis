@@ -242,4 +242,4 @@ The python script iterates through all clusters, calling on this function to plo
 </figure>
 
 ## Analyze Other Cities
-The python notebook used to make this visualization can be downloaded and executed for other cities of the user's interest.
+The python notebook used to make this visualization can be downloaded and executed for other cities of the user's interest. The notebook guides the user by making sure they import the proper libraries and properly load the dataset. Be sure to change the 'city' and 'state' variables when instructed in order to view other cities.
