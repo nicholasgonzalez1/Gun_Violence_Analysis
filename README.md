@@ -13,6 +13,7 @@
         <li><a href="#folium-map-visualization">Folium Map Visualization</a></li>
       </ul>
     </li>
+    <li><a href="#analyze-other-cities">Analyze other Cities</a></li>
   </ol>
 </details>
 
