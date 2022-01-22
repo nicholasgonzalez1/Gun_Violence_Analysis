@@ -235,7 +235,7 @@ The python script iterates through all clusters, calling on this function to plo
 <figure>
   <p align="center">
     <kbd>
-      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/map_example.png?raw=true" width="400">
+      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/map_example.png?raw=true" width="600">
     </kbd>
   </p>
 </figure>
