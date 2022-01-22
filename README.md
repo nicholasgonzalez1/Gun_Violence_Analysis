@@ -214,3 +214,28 @@ df_plot['shooting_size_weight'] = df_plot.apply(lambda x: assign_shooting_size(x
 ```
 
 ### Folium Map Visualization
+
+Now that the weight and size indicators are determined for all shootings, each incident can be plotted and visualized onto a map. Below, a function was created that takes in a Folium map object, latitude and longitude coordinates of a specific shooting, along with other characteristics such as color, opacity, and circle radius. The color corresponds to the cluster that the shooting was assigned to, while the opacity and circle radius correspond to the deadliness factor and shooting size.
+
+```python
+def add_circle(map_, coordinates, color, fill_opac, radius=300):
+    folium.Circle(
+        location=coordinates,
+        radius=radius,
+        weight=0,
+        fill=True,
+        fill_color=color,
+        fill_opacity=fill_opac
+    ).add_to(map_)
+```
+
+The python script iterates through all clusters, calling on this function to plot the incidents. After all shootings are plotted, the Folium map object is called on, and the visualization is shown.
+
+<br>
+<figure>
+  <p align="center">
+    <kbd>
+      <img src="https://github.com/nicholasgonzalez1/Gun_Violence_Analysis/blob/main/images/map_example.png?raw=true" width="400">
+    </kbd>
+  </p>
+</figure>
